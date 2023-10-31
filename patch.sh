@@ -24,7 +24,7 @@ do
 done
 
 sed -i "s|DatabaseMirror .*|DatabaseMirror $mirror|" /var/packages/AntiVirus/target/engine/clamav/etc/freshclam.conf
-rm /var/packages/AntiVirus/target/engine/clamav/var/lib/freshclam.dat
+rm /var/packages/AntiVirus/target/engine/clamav/var/lib/freshclam.dat 2> /dev/null
 
 echo "AntiVirus configuration has been successfully updated. The package has been restarted."
 
