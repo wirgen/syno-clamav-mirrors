@@ -20,8 +20,8 @@ for i in "${!mirror_list[@]}"; do
     response=$(curl --silent --range 0-511 --write-out "%{http_code}" --output daily.cvd.part "https://${mirror_list[$i]}/daily.cvd")
 
     if [ $response -lt 300 ] ; then
-        name=$(cut -d ":" -f1 daily.cvd.part)
-        dt=$(cut -d ":" -f2 daily.cvd.part)
+        name=$(cut -d ":" -f1 daily.cvd.part 2> /dev/null)
+        dt=$(cut -d ":" -f2 daily.cvd.part 2> /dev/null)
 
         if [ "$name" = "ClamAV-VDB" ]; then
             echo "Success"
