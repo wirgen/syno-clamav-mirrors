@@ -25,7 +25,7 @@ for i in "${!mirror_list[@]}"; do
 
         if [ "$name" = "ClamAV-VDB" ]; then
             echo "Success"
-            result+=("${mirror_list[$i]} > $dt")
+            result+=("${mirror_list[$i]} > UPD: $dt")
             available+=("${mirror_list[$i]}")
         else
             echo "Failed (Wrong file)"
@@ -55,6 +55,6 @@ done
 sed -i "s|DatabaseMirror .*|DatabaseMirror $mirror|" /var/packages/AntiVirus/target/engine/clamav/etc/freshclam.conf
 rm /var/packages/AntiVirus/target/engine/clamav/var/lib/freshclam.dat 2> /dev/null
 
-echo "AntiVirus configuration has been successfully updated. Restarting AntiVirus..."
+echo -e "\nAntiVirus configuration has been successfully updated. Restarting AntiVirus..."
 
 synopkg restart AntiVirus
