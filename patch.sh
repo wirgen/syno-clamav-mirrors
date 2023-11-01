@@ -1,8 +1,11 @@
 #!/bin/sh
 
 declare -a mirror_list=(
-    "packages.microsoft.com/clamav"
     "database.clamav.net"
+    "packages.microsoft.com/clamav"
+    "pivotal-clamav-mirror.s3.amazonaws.com"
+    "clamavdb.c3sl.ufpr.br"
+    "www.syscu.net/download/clamav"
 )
 
 if (( $EUID != 0 )); then
