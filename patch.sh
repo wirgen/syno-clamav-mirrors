@@ -31,7 +31,7 @@ for i in "${!mirror_list[@]}"; do
 
         if [ "$name" = "ClamAV-VDB" ]; then
             echo "Success"
-            result+=("${mirror_list[$i]} > UPD: $dt")
+            result+=("$(printf '%-40s UPD: %s' "${mirror_list[$i]}" "$dt")")
             available+=("${mirror_list[$i]}")
         else
             echo "Failed (Wrong file)"
