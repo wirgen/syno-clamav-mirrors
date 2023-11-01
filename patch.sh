@@ -6,6 +6,9 @@ declare -a mirror_list=(
     "pivotal-clamav-mirror.s3.amazonaws.com"
     "clamavdb.c3sl.ufpr.br"
     "www.syscu.net/download/clamav"
+    "clmvupd.deltamoby.ru"
+    "clamav.mirror.eterfund.ru"
+    "clamav.mirror.eterfund.org"
 )
 
 if (( $EUID != 0 )); then
