@@ -11,14 +11,7 @@ This patch setup a mirror of antivirus updates on any of the presented lists.
 - sudo/root
 
 ## Available mirrors
-- https://database.clamav.net
-- https://packages.microsoft.com/clamav
-- https://pivotal-clamav-mirror.s3.amazonaws.com
-- https://clamavdb.c3sl.ufpr.br
-- https://www.syscu.net/download/clamav
-- https://clmvupd.deltamoby.ru
-- https://clamav.mirror.eterfund.ru
-- https://clamav.mirror.eterfund.org
+...you can see in patch.sh or after executing script
 
 ## Manual
 
